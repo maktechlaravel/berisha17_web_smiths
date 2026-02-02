@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="./output.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="home">
+
+    <!-- HEADER -->
+    <header x-data="{ open: false }" class="absolute top-0 left-0 w-full z-50 transition-all duration-500">
+        <div class="max-w-[1400px] mx-auto flex items-center justify-between lg:px-10 px-7.5 py-4 md:py-4 z-1 relative">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 text-white font-semibold tracking-wide">
+                <span class="text-lg">MONO AI</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-white/80 md:-mr-[10px]">
+                <a href="#" class="hover:text-white transition">About AMG</a>
+                <a href="#" class="hover:text-white transition">Our Solutions</a>
+                <a href="#" class="hover:text-white transition">Features</a>
+                <a href="#" class="hover:text-white transition">Testimonials</a>
+                <a href="#" class="hover:text-white transition">FAQs</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="hidden lg:block">
+                <a href="contact.html"
+                    class="border border-white/15 text-white font-medium h-[40px] flex items-center justify-center px-4 py-2 rounded-full backdrop-blur-[5px] bg-white/15 hover:bg-white/20 transition">
+                    Contact Us
+                </a>
+            </div>
+
+            <!-- Mobile Burger -->
+            <button @click="open = !open"
+                class="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-full bg-white">
+                <!-- Lines -->
+                <div class="relative w-5 h-4">
+                    <span class="absolute left-0 w-full h-[2px] bg-black rounded-full transition-all duration-300"
+                        :class="open ? 'top-1/2 rotate-45' : 'top-0 rotate-0'"></span>
+                    <span
+                        class="absolute left-0 w-full h-[2px] bg-black rounded-full transition-all duration-300 -mt-[1px]"
+                        :class="open ? 'opacity-0' : 'top-1/2'"></span>
+                    <span class="absolute left-0 w-full h-[2px] bg-black rounded-full transition-all duration-300"
+                        :class="open ? 'top-1/2 -rotate-45' : 'bottom-0 rotate-0'"></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="open" x-transition.opacity.duration.300ms
+            class="fixed inset-0 bg-black/90 backdrop-blur-md flex flex-col items-center justify-center space-y-6 text-white text-lg lg:hidden">
+            <a href="#" class="hover:text-gray-300 transition">About AMG</a>
+            <a href="#" class="hover:text-gray-300 transition">Our Solutions</a>
+            <a href="#" class="hover:text-gray-300 transition">Features</a>
+            <a href="#" class="hover:text-gray-300 transition">Testimonials</a>
+            <a href="#" class="hover:text-gray-300 transition">FAQs</a>
+            <a href="contact.html"
+                class="border border-white/20 bg-white/10 px-6 py-2 rounded-full hover:bg-white/20 transition">
+                Contact Us
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="relative text-white overflow-hidden">
+            <!-- Фонове відео -->
+            <div class="absolute top-0 left-0 right-0 h-[105%] opacity-50">
+                <video src="https://framerusercontent.com/assets/iWlVr4qV5BuFxjhc6g7QcPK5o.mp4" loop="" preload="auto"
+                    muted="" playsinline=""
+                    style="cursor:auto;width:100%;height:100%;border-radius:0px;display:block;object-fit:fill;background-color:rgba(0, 0, 0, 0);object-position:50% 50%"
+                    autoplay=""></video>
+
+            </div>
+            <!-- Контент -->
+            <div
+                class="relative z-10 gap-6 flex flex-col items-center justify-center text-center px-6 pt-49 sm:pt-28 pb-24 sm:pb-16 md:py-49 max-w-[800px] mx-auto">
+
+                <!-- Заголовок -->
+                <h1 class="text-[36px] md:text-6xl font-medium !leading-[1.2em]" id="headline">
+                    Terms of service
+                </h1>
+
+                <div class="flex flex-wrap justify-center gap-4 translate-y-2">
+                    <a href="#"
+                        class="bg-white text-[#111] font-medium h-[32px] flex items-center justify-center text-sm px-3.5 py-2.5 rounded-full hover:bg-gray-300 transition">
+                        v1.0.0
+                    </a>
+                    <a href="#"
+                        class="border border-white/15 text-white font-medium h-[32px] flex items-center justify-center text-sm px-3.5 py-2.5 rounded-full backdrop-blur-[5px] bg-white/15 hover:bg-white/20 transition">
+                        Jul 27, 2025
+                    </a>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+        <section class=" px-6 md:px-7.5 pb-24">
+            <div class="space-y-12 text-gray-200 max-w-[569px] mx-auto">
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">1. Acceptance of Terms</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        By using Superior ("the Service"), you agree to these Terms, our Privacy Policy, and any other
+                        rules or guidelines that we may communicate to you. These Terms apply to all visitors, users,
+                        and others who access the Service ("Users").
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">2. Eligibility</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        You must be at least 18 years old or have parental/guardian consent to use our Service. By using
+                        the Service, you confirm that you have the legal capacity to agree to these Terms.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">3. Account Registration</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        You are responsible for providing accurate and complete information when creating an account.
+                        You are responsible for maintaining the confidentiality of your account credentials and for all
+                        activities under your account. Notify us immediately of any unauthorized use of your account.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">4. Use of the Service</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        You agree not to: Use the Service for any unlawful purpose. Interfere with or disrupt the
+                        integrity or performance of the Service. Attempt to gain unauthorized access to the Service or
+                        related systems. We reserve the right to suspend or terminate accounts violating these Terms.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">5. Payment and Subscription</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        Certain features of the Service may require payment. All fees are non-refundable unless
+                        otherwise stated. We may change pricing or subscription terms with prior notice.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">6. Content and Intellectual Property</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        All content on the Service, including text, images, and software, is owned by [Your Website
+                        Name] or its licensors. You may not copy, modify, distribute, or create derivative works without
+                        explicit permission. By submitting content to the Service, you grant us a non-exclusive,
+                        royalty-free license to use, modify, and display your content.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">7. Termination</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        We may suspend or terminate your access to the Service at our sole discretion, with or without
+                        notice, for any violation of these Terms or other legitimate reasons.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">8. Disclaimer of Warranties</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        The Service is provided "as is" and "as available" without warranties of any kind, express or
+                        implied. We do not guarantee the accuracy, completeness, or reliability of the Service.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">9. Limitation of Liability</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        To the fullest extent permitted by law, [Your Website Name] shall not be liable for any
+                        indirect, incidental, special, or consequential damages arising from your use of the Service.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">10. Changes to Terms</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        We reserve the right to modify these Terms at any time. We will notify you of changes by
+                        updating the "Last Updated" date. Continued use of the Service constitutes acceptance of the
+                        revised Terms.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">11. Governing Law</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        These Terms are governed by the laws of [Your Jurisdiction], without regard to its conflict of
+                        laws principles.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-medium mb-6 text-white">12. Contact Us</h5>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        For questions or concerns about these Terms, please contact us at email. By using our Service,
+                        you agree to these Terms of Service.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="relative text-white md:mt-50 mt-36 overflow-hidden">
+            <!-- Фонове відео -->
+            <video src="https://framerusercontent.com/assets/j9ikamCpeUjzKj02RjLij5mfhRw.mp4" autoplay muted loop
+                playsinline class="absolute inset-0 w-full h-full object-fill opacity-50"></video>
+
+            <!-- Контейнер -->
+            <div
+                class="relative z-10 max-w-[900px] mx-auto flex flex-col items-center justify-center text-center px-6 py-24 gap-6">
+                <!-- Заголовок -->
+                <h2 id="headline2" class="text-4xl md:text-[44px] !font-medium !leading-[1.2em]">
+                    <span class="inline-block">Ready</span>
+                    <span class="inline-block">to</span>
+                    <span class="inline-block">automate</span>
+                    <span class="inline-block italic font-serif">everything?</span>
+                </h2>
+
+                <!-- Кнопки для секції -->
+                <div id="buttons2" class="flex flex-wrap justify-center gap-4 mt-10">
+                    <a href="#"
+                        class="bg-white text-[#111] font-medium h-[44px] flex items-center justify-center px-5 py-2.5 rounded-full hover:bg-gray-300 transition">
+                        Get started
+                    </a>
+                    <a href="#"
+                        class="border border-white/15 text-white font-medium h-[44px] flex items-center justify-center px-5 py-2.5 rounded-full backdrop-blur-[5px] bg-white/15 hover:bg-white/20 transition">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="fixed bottom-0 left-0 right-0 h-[102px] flex-none z-9">
+
+            <div style="position:absolute;inset:0;overflow:hidden">
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 1; mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 37.5%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(0.0703125px); will-change: auto;">
+                </div>
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 2; mask-image: linear-gradient(rgba(0, 0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 37.5%, rgba(0, 0, 0, 0) 50%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(0.140625px); will-change: auto;">
+                </div>
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 3; mask-image: linear-gradient(rgba(0, 0, 0, 0) 25%, rgb(0, 0, 0) 37.5%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 62.5%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(0.28125px); will-change: auto;">
+                </div>
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 4; mask-image: linear-gradient(rgba(0, 0, 0, 0) 37.5%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 62.5%, rgba(0, 0, 0, 0) 75%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(0.5625px); will-change: auto;">
+                </div>
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 5; mask-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 62.5%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 87.5%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(1.125px); will-change: auto;">
+                </div>
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 6; mask-image: linear-gradient(rgba(0, 0, 0, 0) 62.5%, rgb(0, 0, 0) 75%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(2.25px); will-change: auto;">
+                </div>
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 7; mask-image: linear-gradient(rgba(0, 0, 0, 0) 75%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 100%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(4.5px); will-change: auto;">
+                </div>
+                <div
+                    style="opacity: 1; position: absolute; inset: 0px; z-index: 8; mask-image: linear-gradient(rgba(0, 0, 0, 0) 87.5%, rgb(0, 0, 0) 100%); border-radius: 0px; pointer-events: none; backdrop-filter: blur(9px); will-change: auto;">
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="relative z-10">
+        <div class="max-w-[1280px] mx-auto lg:px-10 px-7.5 py-16 flex flex-col justify-between md:flex-row gap-10">
+            <!-- Лого та опис -->
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="flex items-center gap-2">
+                    <!-- Можеш вставити свій SVG лого тут -->
+                    <span class="text-lg font-bold mb-2">MONO AI</span>
+                </a>
+                <p class="!font-light text-[15px] text-white/80">Alpha Marketing Group provides Innovating marketing for
+                    tomorrow's brands, today.</p>
+            </div>
+
+            <div class="flex flex-col gap-6 justify-between md:flex-row">
+                <!-- Продукт -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="!font-light text-white">Our Office</h3>
+                    <a href="javescript:void(0)" class="!font-light text-white/80 hover:text-white transition">5/F Yat
+                        Chau
+                        Building</a>
+                    <a href="javescript:void(0)" class="!font-light text-white/80 hover:text-white transition">262 Des
+                        Voeux
+                        Road</a>
+                    <a href="javescript:void(0)" class="!font-light text-white/80 hover:text-white transition">Hong
+                        Kong</a>
+                </div>
+
+                <!-- Соціальні мережі -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="!font-light text-white">Connect</h3>
+                    <a href="tel:+85281911271" class="!font-light text-white/80 hover:text-white transition">+852 8191
+                        1271</a>
+                    <a href="mailto:info@alpha-marketinghk.com"
+                        class="!font-light text-white/80 hover:text-white transition">info@alpha-marketinghk.com</a>
+                    <a href="contact.html" class="!font-light text-white/80 hover:text-white transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Підвал -->
+        <div
+            class="max-w-[1280px] mx-auto lg:px-10 px-7.5 pt-8 pb-14 lg:py-14 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/80">
+            <span>© Alpha Marketing Group Company Limited. 2018-2025. All rights reserved</span>
+            <span><a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a></span>
+
+        </div>
+    </footer>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        function counterSection() {
+            return {
+                started: false,
+                counters: [
+                    { target: 50, display: 0 },
+                    { target: 145, display: 0 },
+                ],
+
+                // Ініціалізувати IntersectionObserver на переданому елементі
+                initObserver(rootEl) {
+                    // Якщо браузер не підтримує IntersectionObserver — запускаємо без нього
+                    if (!('IntersectionObserver' in window)) {
+                        this.startAll();
+                        return;
+                    }
+
+                    const io = new IntersectionObserver((entries, obs) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                this.startAll();
+                                obs.disconnect();
+                            }
+                        });
+                    }, { threshold: 0.5 }); // спрацьовує коли 50% секції у в'юпорті
+
+                    io.observe(rootEl);
+                },
+
+                // Запуск всіх лічильників (захист від повторного старту)
+                startAll() {
+                    if (this.started) return;
+                    this.started = true;
+                    this.counters.forEach(c => this.animateCounter(c, 1500)); // 1500 ms кожен
+                },
+
+                // Анімація через requestAnimationFrame з easing
+                animateCounter(counterObj, duration = 1200) {
+                    const from = 0;
+                    const to = Number(counterObj.target) || 0;
+                    const startTime = performance.now();
+
+                    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+
+                    const tick = (now) => {
+                        const elapsed = now - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = easeOutCubic(progress);
+                        const current = Math.round(from + (to - from) * eased);
+                        counterObj.display = current;
+
+                        if (progress < 1) {
+                            requestAnimationFrame(tick);
+                        } else {
+                            counterObj.display = to; // гарантія точного кінця
+                        }
+                    };
+
+                    requestAnimationFrame(tick);
+                }
+            };
+        }
+    </script>
+
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+:root {
+    --Primary-400: #01081B;
+    --Primary-600: #067483;
+    --font-family: "Geist", "Geist Placeholder", sans-serif;
+    --font-family-bold: "Geist", "Geist Placeholder", sans-serif;
+    --swiper-navigation-size: 16px !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background: #000;
+}
+
+header nav a{
+    font-size: 15px;
+}
+
+.swiper-pagination-bullet{
+    width: 28px;
+    height: 5px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.2);
+    opacity:1;
+    margin: 0 !important;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.transition-max-height {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.wide-dropdown {
+    left: 0;
+    right: 0;
+}
+
+ul.list-disc,
+ul:not([class]) {
+    padding-left: 20px;
+    /*list-style: none !important;*/
+}
+
+ul.list-disc li,
+ul:not([class]) li {
+    position: relative;
+    /*padding-left: 25px;*/
+}
+
+ul.list-disc li:before,
+ul:not([class]) li:before {
+    /*content: '';*/
+    /*background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgZmlsbD0ibm9uZSI+CiAgPGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iMyIgZmlsbD0iIzAwOTlBRCIvPgo8L3N2Zz4=") no-repeat;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: -2px;*/
+    /*width: 21px;*/
+    /*height: 21px;*/
+}
+
+a,
+.border-gray-300,
+.nav-icons button svg,
+.nav-icons button svg g,
+button {
+    transition-duration: 167ms;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500 !important;
+    line-height: 1;
+}
+
+h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+h1:not([class]),
+.h1:not([class]) {
+    font-size: 48px;
+}
+
+h1.font-normal,
+h2.font-normal,
+h3.font-normal {
+    font-weight: 400;
+    line-height: 1.33;
+}
+
+h1.font-medium,
+h2.font-medium,
+h3.font-medium {
+    font-weight: 500;
+    line-height: 1.33;
+}
+
+h2:not([class]),
+.h2:not([class]) {
+    font-size: 24px;
+}
+
+h3:not([class]),
+.h3:not([class]) {
+    font-size: 24px;
+}
+
+h4,
+.h4 {
+    font-size: 1em;
+}
+
+h5,
+.h5 {
+    font-size: .83em;
+}
+
+h6,
+.h6 {
+    font-size: .67em;
+}
+
+ol:not([class]),
+ul:not([class]) {
+    list-style: auto;
+    padding: 20px 0 0 20px;
+    display: inline-block;
+}
+
+ul:not([class]) {
+    list-style: disc;
+    padding: 0px;
+}
+
+ol:not([class]) li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 19px;
+    text-decoration: none !important;
+    min-width: 120px;
+    font-weight: 300;
+    border-radius: 8px;
+    white-space: nowrap;
+    height: 56px;
+}
+
+
+.btn:hover {
+
+}
+
+h5{
+    font-size: 21px !important;
+    color:#fff !important;
+}
+
+input, select, optgroup, textarea, ::file-selector-button {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    min-height: 44px;
+}
+
+a:hover .btnHover{
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.modBox{
+
+    height: 416px;
+
+}
+.mask1, .mask2{
+    mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+}
+.gradient-rad{
+    background: radial-gradient(31.530489856134707% 29.717999881249966% at 49.999988723818106% 51.193062409305725%, #fff0 45.500001311302185%, #000);
+    border-radius: 100%;
+    flex: none;
+    inset: -368px -234px -253px -235px;
+    position: absolute;
+    z-index: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll-up {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes scroll-down {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+.marquee-up {
+    animation: scroll-up 60s linear infinite;
+}
+
+.marquee-down {
+    animation: scroll-down 60s linear infinite;
+}
+
+
+#reveal-text span {
+    opacity: 0.2;
+    display: inline-block;
+    transition: opacity 0.1s linear;
+}
+
+#reveal-text span.visible {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 1140px) {
+    h1:not([class]), .h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+
+
+}
+
+@media (max-width: 768px) {
+    h1:not([class]), .h1 {
+        font-size: 28px;
+    }
+
+    .template-opacity{
+        opacity: 1 !important;
+    }
+
+
+    h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
+        margin-bottom: 24px;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 568px) {
+header > div.mx-auto {
+    padding: 20px;
+}
+}
