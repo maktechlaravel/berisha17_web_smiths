@@ -16,7 +16,7 @@
 <body class="home">
 
     <!-- HEADER -->
-   <header x-data="{ open: false }" class="absolute top-0 left-0 w-full z-50 transition-all duration-500">
+    <header x-data="{ open: false }" class="absolute top-0 left-0 w-full z-50 transition-all duration-500">
         <div class="max-w-[1400px] mx-auto flex items-center justify-between lg:px-10 px-7.5 py-4 md:py-4 z-1 relative">
 
             <!-- Logo -->
@@ -104,26 +104,26 @@
             <div
                 class="max-w-[1120px] mx-auto rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-3 border border-[#1a1a1a]">
                 <!-- Форма -->
-                <div class="lg:col-span-2 p-8 lg:p-12">
-                    <form class="space-y-6">
+                <!-- <div class="lg:col-span-2 p-8 lg:p-12">
+                    <form class="space-y-6" id="contact-form">
                         <div>
                             <label class="block mb-2 text-[15px] text-gray-400">Name</label>
-                            <input type="text" placeholder="Jane Smith"
+                            <input type="text" placeholder="Jane Smith" name="user_name"
                                 class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15" />
                         </div>
                         <div>
                             <label class="block mb-2 text-[15px] text-gray-400">Email</label>
-                            <input type="email" placeholder="jane@mono.ai"
+                            <input type="email" placeholder="jane@mono.ai" name="user_email"
                                 class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15" />
                         </div>
                         <div>
                             <label class="block mb-2 text-[15px] text-gray-400">Company</label>
-                            <input type="text" placeholder="Apple"
+                            <input type="text" placeholder="Apple" name="company_name"
                                 class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15" />
                         </div>
                         <div>
                             <label class="block mb-2 text-[15px] text-gray-400">Message</label>
-                            <textarea rows="3" placeholder="I need help with..."
+                            <textarea rows="3" placeholder="I need help with..." name="message"
                                 class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15"></textarea>
                         </div>
 
@@ -143,8 +143,51 @@
                             </p>
                         </div>
                     </form>
-                </div>
+                </div> -->
 
+                <div class="lg:col-span-2 p-8 lg:p-12">
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <label class="block mb-2 text-[15px] text-gray-400">Name</label>
+                            <input type="text" placeholder="Jane Smith" name="user_name" required
+                                class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15" />
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-[15px] text-gray-400">Email</label>
+                            <input type="email" placeholder="jane@mono.ai" name="user_email" required
+                                class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15" />
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-[15px] text-gray-400">Company</label>
+                            <input type="text" placeholder="Apple" name="company_name"
+                                class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15" />
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-[15px] text-gray-400">Message</label>
+                            <textarea rows="3" placeholder="I need help with..." name="message" required
+                                class="w-full placeholder-[#fafafa]/80 bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#fff]/15"></textarea>
+                        </div>
+
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center sm:justify-between items-center justify-center gap-10 md:gap-3 mt-2">
+                            <button type="submit"
+                                class="w-full md:w-auto bg-white text-[#111] font-medium h-[44px] flex items-center justify-center px-5 py-2.5 rounded-full hover:bg-gray-300 transition">
+                                Get in touch
+                            </button>
+                            <p class="text-white/80 text-[15px] flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-90" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                Avg. response: 24h
+                            </p>
+                        </div>
+
+                        <!-- Status message -->
+                        <div id="form-message" class="text-center mt-4"></div>
+                    </form>
+                </div>
                 <!-- Контакти -->
                 <div class="border-t border-[#1a1a1a] lg:border-t-0 lg:border-l bg-[#0e0e0e] grid items-center">
                     <div class="flex flex-col items-start gap-4 p-8 lg:p-10 h-full justify-center">
@@ -175,6 +218,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -331,7 +375,6 @@
 
     </main>
 
-
     <footer class="relative z-10">
         <div class="max-w-[1280px] mx-auto lg:px-10 px-7.5 py-16 flex flex-col justify-between md:flex-row gap-10">
             <!-- Лого та опис -->
@@ -378,7 +421,13 @@
 
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         function counterSection() {
@@ -445,6 +494,62 @@
     </script>
 
 
+    <script type="text/javascript">
+        // Initialize EmailJS with your actual public key
+        (function () {
+            emailjs.init("VW-ar0I9DUGGVLwle");
+        })();
+
+        $(document).ready(function () {
+            $("#contact-form").on("submit", function (e) {
+                e.preventDefault();
+
+                // Get the submit button
+                const $submitBtn = $(this).find('button[type="submit"]');
+                const originalText = $submitBtn.text();
+
+                // Show loading state
+                $submitBtn.prop("disabled", true).text("Sending...");
+
+                // Clear any previous messages
+                $("#form-message").text("");
+
+                // Get form data
+                const formData = $(this)[0];
+
+                // Send email via EmailJS
+                emailjs.sendForm("service_sb7js3c", "template_ntljvof", formData)
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+
+                        // Show success message
+                        $("#form-message")
+                            .text("✓ Message sent successfully! We'll get back to you soon.")
+                            .css("color", "#4ade80");
+
+                        // Reset the form
+                        $("#contact-form")[0].reset();
+
+                        // Reset the button after 2 seconds
+                        setTimeout(() => {
+                            $submitBtn.prop("disabled", false).text(originalText);
+                            $("#form-message").fadeOut();
+                        }, 3000);
+                    })
+                    .catch(function (error) {
+                        console.error('FAILED...', error);
+
+                        // Show error message
+                        $("#form-message")
+                            .text("✗ Failed to send message. Please try again or contact us directly.")
+                            .css("color", "#ef4444");
+
+                        // Reset the button
+                        $submitBtn.prop("disabled", false).text(originalText);
+                    });
+            });
+        });
+    </script>
 
     <script src="./assets/js/script.js"></script>
 </body>
